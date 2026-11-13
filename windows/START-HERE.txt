@@ -1,0 +1,48 @@
+STARFIELD SAVE REPAIR — WINDOWS
+Anchorpoint position repair • version 0.2.0
+
+1. Extract the entire ZIP to a folder. Keep the _internal folder beside the EXE.
+2. Save and quit Starfield.
+3. Open StarfieldSaveRepair.exe. Python, Felix, SFSE and administrator access
+   are not required. There is no account, telemetry or network connection.
+4. Choose your .sfs save with Browse, or use the latest save found by the app.
+5. Click Check save. If a severely displaced Anchorpoint is found, click
+   Create repaired save.
+6. The app adds a new Save<number> file beside your original and displays its
+   slot and full filename. Start Starfield, choose Load, and select that new slot.
+7. Visit Anchorpoint and test docking. Save to another slot and reload to check
+   that the position remains correct. Keep your original until satisfied.
+
+WHAT CHANGES
+Only the three saved position coordinates for Anchorpoint (12 decoded bytes).
+Every other decoded byte is verified unchanged. Existing saves are never
+overwritten. Backups and reports are stored under:
+  %LOCALAPPDATA%\StarfieldSaveRepair\repairs
+Use Open backup & report in the app to find the exact repair folder.
+
+If the app reports that Anchorpoint is already restored or not severely
+displaced, it writes no new save. Choose the affected original if appropriate.
+If a save changes after inspection or the game is running, repair is refused.
+
+SUPPORTED / LIMITS
+64-bit Windows (tested on Windows 11). PC .sfs files in BCPS/ZIP format,
+engine layout 27 and save layout 153. Tested against Starfield 1.16.244.0.
+The save must retain its original Starfield filename to create a game slot.
+Xbox WGS containers and unsupported save layouts are refused.
+
+One affected player reported that the repaired save worked on 2026-11-13.
+Long-term persistence and behavior across other saves are not established.
+The fix restores position; it does not reset quests, scripts, physics or
+docking attachments, and does not address every cause of station trouble.
+
+RECOVERY
+Load your untouched original save from Starfield's Load menu. If you need to
+restore a missing original, close the game, open the repair folder, and use
+installation.json to identify sourceFile. Copy the hash-named .sfs from backups
+to the game's Saves folder under that original filename, without replacing a
+newer save. The report links input/output hashes and the exact edited field.
+
+This portable build is unsigned. No security setting needs to be disabled.
+The source release and build instructions are supplied separately for review.
+Independent community tool; not affiliated with Bethesda. See LICENSE, NOTICE
+and licenses/ for the project and bundled runtime acknowledgments.

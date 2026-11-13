@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "anchorpoint-position",
+  "title": "Restore displaced Anchorpoint station position",
+  "operation": "restoreReferencePosition",
+  "status": "userConfirmedRecovery",
+  "supportedSaveVersions": [153],
+  "target": {
+    "plugin": "SFBGS00D.esm",
+    "localFormId": "064B7D",
+    "cellPlugin": "SFBGS00D.esm",
+    "cellLocalFormId": "032DFF"
+  },
+  "position": [-80.5707778930664, 520.0000610351562, 116.23285675048828],
+  "minimumDisplacement": 100000000.0,
+  "evidence": "Authored REFR DATA in SFBGS00D.esm supplied with Starfield 1.16.244. The affected save contained an approximately 1.535e12-unit displaced position in the correct cell.",
+  "limitations": "Repairs the saved position only. Does not reset docking links, Havok, scripts, or quests. Recovery reported by one player on 2026-11-13; detailed docking and save/reload persistence were not independently recorded."
+}

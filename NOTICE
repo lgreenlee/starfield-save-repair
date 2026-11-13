@@ -1,0 +1,25 @@
+Starfield Save Repair
+Copyright 2026 Starfield Save Repair contributors
+Licensed under the Apache License, Version 2.0.
+
+This product includes adapted format/layout logic from ReSaver++:
+https://github.com/Tonycubed2/ResaverPP
+Research revision: 61f69a87b3d21a1a37b6aeeaf2dda07c4e71074b
+ReSaver++ is a C++ port of ReSaver (FallrimTools) by Mark Fairchild,
+distributed under Apache License 2.0. Starfield format research and
+implementation: Tonycubed2/ResaverPP contributors.
+
+Relevant upstream sources: src/core/SaveSF.cpp, SaveSFRefr.cpp, Save.cpp,
+and Papyrus.h. These informed BCPS framing, plugin metadata, packed
+references, change-form framing/type runs, and initial position layout.
+This project implements a limited Python reader and same-length position
+patcher. It does not include the upstream GUI, full decoder, or dependencies.
+The original algorithms have been adapted and modified for this purpose.
+
+Additional public format documentation consulted:
+Nexus-Mods/StarfieldSaveTool, by Simon Davies (insomnious) and Nexus Mods.
+https://github.com/Nexus-Mods/StarfieldSaveTool
+No code from that project is bundled.
+
+Starfield and related names belong to their respective owners. The project
+contains repair metadata, not game assets, saves, or Bethesda program code.

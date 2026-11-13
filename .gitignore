@@ -1,0 +1,12 @@
+.research/
+.private/
+dist/
+build/
+*.sfs
+*.raw
+*.bak
+__pycache__/
+*.egg-info/
+.venv/
+.venv-build/
+.pytest_cache/

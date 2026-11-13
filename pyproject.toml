@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starfield-save-repair"
+version = "0.2.0"
+description = "Targeted, copy-only Starfield save repairs with byte-level verification"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = []
+
+[project.scripts]
+starfield-save-repair = "starfield_save_repair.cli:main"
+
+[project.gui-scripts]
+starfield-save-repair-ui = "starfield_save_repair.gui:main"
+
+[tool.setuptools.packages.find]
+include = ["starfield_save_repair*"]
+
+[tool.setuptools.package-data]
+starfield_save_repair = ["recipes/*.json"]
